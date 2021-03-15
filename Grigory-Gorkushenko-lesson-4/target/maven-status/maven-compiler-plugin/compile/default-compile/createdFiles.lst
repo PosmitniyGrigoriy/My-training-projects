@@ -1,5 +1,0 @@
-com\javarush\lectures\rest_example\RestExampleApplication.class
-com\javarush\lectures\rest_example\service\ClientServiceImpl.class
-com\javarush\lectures\rest_example\service\ClientService.class
-com\javarush\lectures\rest_example\model\Client.class
-com\javarush\lectures\rest_example\controller\ClientController.class
