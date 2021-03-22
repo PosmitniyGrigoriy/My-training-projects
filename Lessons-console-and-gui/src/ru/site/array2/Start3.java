@@ -8,8 +8,8 @@ public class Start3 {
 
 	public static void main (String[] args) {
 		
-		int[] BMW = new int[3];
-		int[] Audi = new int[3];
+		int[] bmw = new int[3];
+		int[] audi = new int[3];
 		String[] name = new String [3];
 		
 		int result = 0;
@@ -28,7 +28,7 @@ public class Start3 {
 		String theSurveyWasAttendedBy = "\nВ опросе приняли участие:\n";
 		String votesNoCast = "Все участники опроса не верно ввели вариант ответа, поэтому были исключены. Проголосовавших нет.";
 		
-		Scanner On = new Scanner (System.in);
+		Scanner on = new Scanner (System.in);
 		
 			for (int i = 0; i < name.length; i++) {
 				if (i == 0) {
@@ -38,30 +38,30 @@ public class Start3 {
 				} else if (i == 2) {
 					System.out.println(aSurveyOfTheThirdPerson);
 				}
-				result = On.nextInt();
+				result = on.nextInt();
 				if (result == 1) {
-					BMW[i] = 1;
+					bmw[i] = 1;
 				} else if (result == 2) {
-					Audi[i] = 1;
+					audi[i] = 1;
 				} else if (!(result == 1 & result == 2)) {
 					System.out.println(repeatVote);
-					result = On.nextInt();
+					result = on.nextInt();
 					if (result == 1) {
-						BMW[i] = 1;
+						bmw[i] = 1;
 					} else if (result == 2) {
-						Audi[i] = 1;
+						audi[i] = 1;
 					} else {
 						System.out.println(canNotVote);
 					}
 				}
 				if (result == 1) {
 					System.out.println(inputName);
-					resultName = On.next();
+					resultName = on.next();
 					name[i] = resultName;
 					System.out.println(voiceAdd);
 				} else if (result == 2) {
 					System.out.println(inputName);
-					resultName = On.next();
+					resultName = on.next();
 					name[i] = resultName;
 					System.out.println(voiceAdd);
 				} else {
@@ -77,8 +77,8 @@ public class Start3 {
 //		}
 		
 //		2 вариант 1 часть. Подсчет значений в массиве вручную:
-		sumBMW = BMW[0] + BMW[1] + BMW[2];
-		sumAudi = Audi[0] + Audi[1] + Audi[2];
+		sumBMW = bmw[0] + bmw[1] + bmw[2];
+		sumAudi = audi[0] + audi[1] + audi[2];
 		
 //		1 и 2 варианты 3 часть. Вывод результатов голосования.
 		if (sumBMW ==0 && sumAudi == 0) {
@@ -94,24 +94,24 @@ public class Start3 {
 //		2 вариант 2 часть. Вывод результатов вручную, указывая каждый массив, выводит имена, убирает null с имен
 		if (name[0] == null && name[1] == null && name[2] == null) {
 		} else if (!(name[0] == null) && !(name[1] == null) && !(name[2] == null)) {
-			System.out.printf("%-14s%-9s%-5s%n", name[0], BMW[0], Audi[0]);
-			System.out.printf("%-14s%-9s%-5s%n", name[1], BMW[1], Audi[1]);
-			System.out.printf("%-14s%-9s%-5s%n", name[2], BMW[2], Audi[2]);
+			System.out.printf("%-14s%-9s%-5s%n", name[0], bmw[0], audi[0]);
+			System.out.printf("%-14s%-9s%-5s%n", name[1], bmw[1], audi[1]);
+			System.out.printf("%-14s%-9s%-5s%n", name[2], bmw[2], audi[2]);
 		} else if (!(name[0] == null) && name[1] == null && name[2] == null) {
-			System.out.printf("%-14s%-9s%-5s%n", name[0], BMW[0], Audi[0]);
+			System.out.printf("%-14s%-9s%-5s%n", name[0], bmw[0], audi[0]);
 		} else if (!(name[0] == null) && !(name[1] == null) && name[2] == null) {
-			System.out.printf("%-14s%-9s%-5s%n", name[0], BMW[0], Audi[0]);
-			System.out.printf("%-14s%-9s%-5s%n", name[1], BMW[1], Audi[1]);
+			System.out.printf("%-14s%-9s%-5s%n", name[0], bmw[0], audi[0]);
+			System.out.printf("%-14s%-9s%-5s%n", name[1], bmw[1], audi[1]);
 		} else if (!(name[0] == null) && name[1] == null && !(name[2] == null)) {
-			System.out.printf("%-14s%-9s%-5s%n", name[0], BMW[0], Audi[0]);
-			System.out.printf("%-14s%-9s%-5s%n", name[2], BMW[2], Audi[2]);
+			System.out.printf("%-14s%-9s%-5s%n", name[0], bmw[0], audi[0]);
+			System.out.printf("%-14s%-9s%-5s%n", name[2], bmw[2], audi[2]);
 		} else if (name[0] == null && !(name[1] == null) && name[2] == null) {
-			System.out.printf("%-14s%-9s%-5s%n", name[1], BMW[1], Audi[1]);
+			System.out.printf("%-14s%-9s%-5s%n", name[1], bmw[1], audi[1]);
 		} else if (name[0] == null && !(name[1] == null) && !(name[2] == null)) {
-			System.out.printf("%-14s%-9s%-5s%n", name[1], BMW[1], Audi[1]);
-			System.out.printf("%-14s%-9s%-5s%n", name[2], BMW[2], Audi[2]);
+			System.out.printf("%-14s%-9s%-5s%n", name[1], bmw[1], audi[1]);
+			System.out.printf("%-14s%-9s%-5s%n", name[2], bmw[2], audi[2]);
 		} else if (name[0] == null && name[1] == null && !(name[2] == null)) {
-			System.out.printf("%-14s%-9s%-5s%n", name[2], BMW[2], Audi[2]);
+			System.out.printf("%-14s%-9s%-5s%n", name[2], bmw[2], audi[2]);
 		}
 		
 		// 1 вариант 2 часть.

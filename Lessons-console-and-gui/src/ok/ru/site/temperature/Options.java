@@ -24,19 +24,19 @@ public class Options {
     }
     
     // Variant two
-	public String addTemp(float Temp, char symbol) {
+	public String addTemp(float temp, char symbol) {
 		
-		String RezTemp;
+		String rezTemp;
 		
 		if (symbol == 'F') {
-			Temp = (Temp - 32) / 1.8f;
+			temp = (temp - 32) / 1.8f;
 		} else {
-			Temp = (Temp * 1.8f) + 32;
+			temp = (temp * 1.8f) + 32;
 		}
 		
-		RezTemp = "Температура: " + Temp;
-		System.out.println(RezTemp);
-		return RezTemp;
+		rezTemp = "Температура: " + temp;
+		System.out.println(rezTemp);
+		return rezTemp;
 		
 	}
 	

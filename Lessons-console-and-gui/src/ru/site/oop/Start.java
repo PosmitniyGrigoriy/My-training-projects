@@ -7,20 +7,20 @@ public class Start {
 	public static void main(String[] args) {
 		
 		// наследование
-		Wolf On = new Wolf();
-		On.say();
+		Wolf on = new Wolf();
+		on.say();
 		
-		WildDog On2 = new WildDog();
-		On2.say();
+		WildDog on2 = new WildDog();
+		on2.say();
 		
-		Dog On3 = new Dog();
-		On3.say();
+		Dog on3 = new Dog();
+		on3.say();
 		
 		System.out.println();
 				
 		// инкапсул€ци€. работа с геттерами и сеттерами
-		On.setHeigth(80);
-		On.getHeigth();
+		on.setHeigth(80);
+		on.getHeigth();
 		
 		// полиморфизм. когда объекты могут делать одно и то же действие, но по-разному. пример с говорением животных. кошки, собаки, мыши говорить могут, но говор€т по-разному, и когда вызываетс€ метод "говорить", все животные говор€т по-своему.
 		

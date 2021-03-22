@@ -4,22 +4,22 @@ public class Options {
 
 	public String addResult(int testResult) {
 
-		String Result;
+		String result;
 		String text = "Ваша оценка: ";
 
 		if (testResult >= 51) {
-			Result = "Введите правильное значение";
+			result = "Введите правильное значение";
 		} else if (testResult >= 40 && testResult <= 50) {
-			Result = text + "5" + "\n" + "Превосходная работа!";
+			result = text + "5" + "\n" + "Превосходная работа!";
 		} else if (testResult >= 30 && testResult <= 39) {
-			Result = text + "4" + "\n" + "Хорошо!";
+			result = text + "4" + "\n" + "Хорошо!";
 		} else if (testResult >= 20 && testResult <= 29) {
-			Result = text + "3" + "\n" + "Надо подучить!";
+			result = text + "3" + "\n" + "Надо подучить!";
 		} else {
-			Result = text + "2" + "\n" + "Посерьезнее!";
+			result = text + "2" + "\n" + "Посерьезнее!";
 		}
 
-		return Result;
+		return result;
 
 	}
 

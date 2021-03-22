@@ -6,16 +6,16 @@ public class Start {
 
 	public static void main(String[] args) {
 		
-		Car Start = new Car ();
-		Start.start();
-		Start.stop();
-		Start.drive(2);
+		Car start = new Car ();
+		start.start();
+		start.stop();
+		start.drive(2);
 		
-		Car Start2 = new CarMans ();
-		Start2.drive(10);
+		Car start2 = new CarMans ();
+		start2.drive(10);
 		
-		System.out.println(Start.distance + " test");
-		System.out.println(Start2.distance + " ok");
+		System.out.println(start.distance + " test");
+		System.out.println(start2.distance + " ok");
 		
 	}
 

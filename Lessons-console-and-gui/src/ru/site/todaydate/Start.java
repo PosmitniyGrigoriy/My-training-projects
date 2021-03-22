@@ -16,22 +16,22 @@ public class Start {
 	public static void main(String[] args) {
 		
 		// v1
-		Date Today = new Date();
-		System.out.println("Сегодня: " + Today);
+		Date today = new Date();
+		System.out.println("Сегодня: " + today);
 		
 		// v2
-		SimpleDateFormat Today2 = new SimpleDateFormat("dd-MM-yyyy");
-		String formattedDate = Today2.format(Today);
+		SimpleDateFormat today2 = new SimpleDateFormat("dd-MM-yyyy");
+		String formattedDate = today2.format(today);
 		System.out.println(formattedDate);
 		
 		// v3
-		Today2 = new SimpleDateFormat("EEE, d MMMM yyyy");
-		formattedDate = Today2.format(Today);
+		today2 = new SimpleDateFormat("EEE, d MMMM yyyy");
+		formattedDate = today2.format(today);
 		System.out.println(formattedDate);
 		
 		// v4 (AM - с 00:00 до 12:00 - это день, PM - вечер).
-		Today2 = new SimpleDateFormat("hh:mm:ss a");
-		formattedDate = Today2.format(Today);
+		today2 = new SimpleDateFormat("hh:mm:ss a");
+		formattedDate = today2.format(today);
 		System.out.println(formattedDate);
 		
 		

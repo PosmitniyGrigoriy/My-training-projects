@@ -8,8 +8,8 @@ public class Start2 {
 
 	public static void main (String[] args) {
 		
-		int[] BMW = new int[3];
-		int[] Audi = new int[3];
+		int[] bmw = new int[3];
+		int[] audi = new int[3];
 		String[] name = new String [3];
 		
 		// Как нужно прописывать условия, чтобы они работали. Для массива String и для массива int по-разному нужно оформлять условия
@@ -33,7 +33,7 @@ public class Start2 {
 		String theSurveyWasAttendedBy = "\nВ опросе приняли участие:\n";
 		String votesNoCast = "Все участники опроса не верно ввели вариант ответа, поэтому были исключены. Проголосовавших нет.";
 		
-		Scanner On = new Scanner (System.in);
+		Scanner on = new Scanner (System.in);
 		
 			for (int i = 0; i < name.length; i++) {
 				if (i == 0) {
@@ -43,30 +43,30 @@ public class Start2 {
 				} else if (i == 2) {
 					System.out.println(aSurveyOfTheThirdPerson);
 				}
-				result = On.nextInt();
+				result = on.nextInt();
 				if (result == 1) {
-					BMW[i] = 1;
+					bmw[i] = 1;
 				} else if (result == 2) {
-					Audi[i] = 1;
+					audi[i] = 1;
 				} else if (!(result == 1 & result == 2)) {
 					System.out.println(repeatVote);
-					result = On.nextInt();
+					result = on.nextInt();
 					if (result == 1) {
-						BMW[i] = 1;
+						bmw[i] = 1;
 					} else if (result == 2) {
-						Audi[i] = 1;
+						audi[i] = 1;
 					} else {
 						System.out.println(canNotVote);
 					}
 				}
 				if (result == 1) {
 					System.out.println(inputName);
-					resultName = On.next();
+					resultName = on.next();
 					name[i] = resultName;
 					System.out.println(voiceAdd);
 				} else if (result == 2) {
 					System.out.println(inputName);
-					resultName = On.next();
+					resultName = on.next();
 					name[i] = resultName;
 					System.out.println(voiceAdd);
 				} else {
@@ -74,11 +74,11 @@ public class Start2 {
 			}
 		
 		// 1 вариант 1 часть. Подсчет значений в массиве через цикл:
-		for (int i = 0; i < BMW.length; i++) {
-			sumBMW = sumBMW + BMW[i];
+		for (int i = 0; i < bmw.length; i++) {
+			sumBMW = sumBMW + bmw[i];
 		}
-		for (int i = 0; i < Audi.length; i++) {
-			sumAudi = sumAudi + Audi[i];
+		for (int i = 0; i < audi.length; i++) {
+			sumAudi = sumAudi + audi[i];
 		}
 		
 //		2 вариант 1 часть. Подсчет значений в массиве вручную:

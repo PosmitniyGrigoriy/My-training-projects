@@ -16,8 +16,8 @@ public class Start {
 //		// программа продолжает работу (далее строки программы идут)
 //		// также можно добавить еще finally { ... } внутри скобок код, который нужно обязательно выполнить в добавок к try и catch. Finally устраняет ошибку, чтобы программа дальше работала и вывела результаты.
 		
-		int[] BMW = new int[3];
-		int[] Audi = new int[3];
+		int[] bmw = new int[3];
+		int[] audi = new int[3];
 		
 		int result = 0;
 		int sumBMW = 0;
@@ -44,19 +44,19 @@ public class Start {
 			Scanner On = new Scanner(System.in);
 			result = On.nextInt();
 			if (result == 1) {
-				BMW[0] = 1;
+				bmw[0] = 1;
 				System.out.println(voiceAdd);
 			} else if (result == 2) {
-				Audi[0] = 1;
+				audi[0] = 1;
 				System.out.println(voiceAdd);
 			} else if (!(result == 1 & result == 2)) {
 				System.out.println(repeatVote);
 				result = On.nextInt();
 				if (result == 1) {
-					BMW[0] = 1;
+					bmw[0] = 1;
 					System.out.println(voiceAdd);
 				} else if (result == 2) {
-					Audi[0] = 1;
+					audi[0] = 1;
 					System.out.println(voiceAdd);
 				} else {
 					System.out.println(canNotVote);
@@ -66,23 +66,23 @@ public class Start {
 			System.out.println(exceptionStart);
 		} finally {
 			try {
-				if (BMW[0] == 0 && Audi[0] == 0) {
+				if (bmw[0] == 0 && audi[0] == 0) {
 					Scanner On = new Scanner(System.in);
 					result = On.nextInt();
 					if (result == 1) {
-						BMW[0] = 1;
+						bmw[0] = 1;
 						System.out.println(voiceAdd);
 					} else if (result == 2) {
-						Audi[0] = 1;
+						audi[0] = 1;
 						System.out.println(voiceAdd);
 					} else if (!(result == 1 & result == 2)) {
 						System.out.println(repeatVote);
 						result = On.nextInt();
 						if (result == 1) {
-							BMW[0] = 1;
+							bmw[0] = 1;
 							System.out.println(voiceAdd);
 						} else if (result == 2) {
-							Audi[0] = 1;
+							audi[0] = 1;
 							System.out.println(voiceAdd);
 						} else {
 							System.out.println(canNotVote);
@@ -100,19 +100,19 @@ public class Start {
 			Scanner On = new Scanner(System.in);
 			result = On.nextInt();
 			if (result == 1) {
-				BMW[1] = 1;
+				bmw[1] = 1;
 				System.out.println(voiceAdd);
 			} else if (result == 2) {
-				Audi[1] = 1;
+				audi[1] = 1;
 				System.out.println(voiceAdd);
 			} else if (!(result == 1 & result == 2)) {
 				System.out.println(repeatVote);
 				result = On.nextInt();
 				if (result == 1) {
-					BMW[1] = 1;
+					bmw[1] = 1;
 					System.out.println(voiceAdd);
 				} else if (result == 2) {
-					Audi[1] = 1;
+					audi[1] = 1;
 					System.out.println(voiceAdd);
 				} else {
 					System.out.println(canNotVote);
@@ -122,23 +122,23 @@ public class Start {
 			System.out.println(exceptionStart);
 		} finally {
 			try {
-				if (BMW[1] == 0 && Audi[1] == 0) {
+				if (bmw[1] == 0 && audi[1] == 0) {
 					Scanner On = new Scanner(System.in);
 					result = On.nextInt();
 					if (result == 1) {
-						BMW[1] = 1;
+						bmw[1] = 1;
 						System.out.println(voiceAdd);
 					} else if (result == 2) {
-						Audi[1] = 1;
+						audi[1] = 1;
 						System.out.println(voiceAdd);
 					} else if (!(result == 1 & result == 2)) {
 						System.out.println(repeatVote);
 						result = On.nextInt();
 						if (result == 1) {
-							BMW[1] = 1;
+							bmw[1] = 1;
 							System.out.println(voiceAdd);
 						} else if (result == 2) {
-							Audi[1] = 1;
+							audi[1] = 1;
 							System.out.println(voiceAdd);
 						} else {
 							System.out.println(canNotVote);
@@ -156,19 +156,19 @@ public class Start {
 			Scanner On = new Scanner(System.in);
 			result = On.nextInt();
 			if (result == 1) {
-				BMW[2] = 1;
+				bmw[2] = 1;
 				System.out.println(voiceAdd);
 			} else if (result == 2) {
-				Audi[2] = 1;
+				audi[2] = 1;
 				System.out.println(voiceAdd);
 			} else if (!(result == 1 & result == 2)) {
 				System.out.println(repeatVote);
 				result = On.nextInt();
 				if (result == 1) {
-					BMW[2] = 1;
+					bmw[2] = 1;
 					System.out.println(voiceAdd);
 				} else if (result == 2) {
-					Audi[2] = 1;
+					audi[2] = 1;
 					System.out.println(voiceAdd);
 				} else {
 					System.out.println(canNotVote);
@@ -178,23 +178,23 @@ public class Start {
 			System.out.println(exceptionStart);
 		} finally {
 			try {
-				if (BMW[2] == 0 && Audi[2] == 0) {
+				if (bmw[2] == 0 && audi[2] == 0) {
 					Scanner On = new Scanner(System.in);
 					result = On.nextInt();
 					if (result == 1) {
-						BMW[2] = 1;
+						bmw[2] = 1;
 						System.out.println(voiceAdd);
 					} else if (result == 2) {
-						Audi[2] = 1;
+						audi[2] = 1;
 						System.out.println(voiceAdd);
 					} else if (!(result == 1 & result == 2)) {
 						System.out.println(repeatVote);
 						result = On.nextInt();
 						if (result == 1) {
-							BMW[2] = 1;
+							bmw[2] = 1;
 							System.out.println(voiceAdd);
 						} else if (result == 2) {
-							Audi[2] = 1;
+							audi[2] = 1;
 							System.out.println(voiceAdd);
 						} else {
 							System.out.println(canNotVote);
@@ -216,8 +216,8 @@ public class Start {
 //		}
 		
 		// Вывод результатов вручную, указывая каждый массив
-		sumBMW = BMW[0] + BMW[1] + BMW[2];
-		sumAudi = Audi[0] + Audi[1] + Audi[2];
+		sumBMW = bmw[0] + bmw[1] + bmw[2];
+		sumAudi = audi[0] + audi[1] + audi[2];
 		
 		if (sumBMW ==0 && sumAudi == 0) {
 			System.out.println(resultVote  + "\n" + votesNoCast);

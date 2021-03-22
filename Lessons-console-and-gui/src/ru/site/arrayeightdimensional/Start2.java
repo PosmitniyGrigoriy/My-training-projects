@@ -6,8 +6,8 @@ public class Start2 {
 
 	public static void main(String[] args) {
 
-		Options Array = new Options();
-		Array.eightDimensionalArray();
+		Options array = new Options();
+		array.eightDimensionalArray();
 
 	}
 }

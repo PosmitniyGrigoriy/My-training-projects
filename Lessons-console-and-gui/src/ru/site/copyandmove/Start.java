@@ -6,9 +6,9 @@ public class Start {
 	
 	public static void main(String[] args) {
 		
-		Options On = new Options();
-		System.out.println("Результат копирования: "+  On.copy());
-//		System.out.println("Результат перемещения: "+  On.move());
+		Options on = new Options();
+		System.out.println("Результат копирования: " + on.copy());
+//		System.out.println("Результат перемещения: " + on.move());
 
 	}
 

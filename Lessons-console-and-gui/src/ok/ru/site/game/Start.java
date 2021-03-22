@@ -12,11 +12,6 @@ public class Start {
 		myScore /= 3;
 		System.out.println("My score is " + myScore);
 		
-		
-		
-	
-
-		
 	}
 
 }

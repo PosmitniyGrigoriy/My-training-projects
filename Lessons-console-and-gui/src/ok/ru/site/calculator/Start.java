@@ -37,11 +37,11 @@ public class Start {
         in.close();
     	
         // Variant two
-//    	Options Operations = new Options ();
-//    	Operations.operations(4, 2, '+'); // Доступные операции: +, -, * и /
-//    	Operations.operations(4, 2, '-'); // Доступные операции: +, -, * и /
-//    	Operations.operations(4, 2, '*'); // Доступные операции: +, -, * и /
-//    	Operations.operations(4, 2, '/'); // Доступные операции: +, -, * и /
+//    	Options operations = new Options ();
+//    	operations.operations(4, 2, '+'); // Доступные операции: +, -, * и /
+//    	operations.operations(4, 2, '-'); // Доступные операции: +, -, * и /
+//    	operations.operations(4, 2, '*'); // Доступные операции: +, -, * и /
+//    	operations.operations(4, 2, '/'); // Доступные операции: +, -, * и /
         
     }
 }

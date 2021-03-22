@@ -6,11 +6,11 @@ public class Start {
 
 	public static void main(String[] args) {
 
-		Options Grades = new Options ();
+		Options grades = new Options ();
 		
 		System.out.println("----------------------");
 		
-		char rezult = Grades.writeTestRezult(92);
+		char rezult = grades.writeTestRezult(92);
 		System.out.println("Ваша первая оценка: " + rezult);
 		
 		switch (rezult) {
@@ -30,7 +30,7 @@ public class Start {
 		
 		System.out.println("----------------------");
 		
-		rezult = Grades.writeTestRezult(82);
+		rezult = grades.writeTestRezult(82);
 		System.out.println("Ваша вторая оценка: " + rezult);
 		
 		switch (rezult) {

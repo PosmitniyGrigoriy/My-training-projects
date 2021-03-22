@@ -7,12 +7,12 @@ public class Start {
 	public static void main(String[] args) {
 		
 		// Variant one
-		Options ConvertTemp = new Options ();
-		ConvertTemp.convertTemp(50, 'F');
+		Options convertTemp = new Options ();
+		convertTemp.convertTemp(50, 'F');
 		
 		// Variant two
-		Options ConvertTemp2 = new Options ();
-		ConvertTemp2.addTemp(50, 'C');
+		Options convertTemp2 = new Options ();
+		convertTemp2.addTemp(50, 'C');
 		
 		
 		

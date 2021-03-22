@@ -8,8 +8,8 @@ public class v2 {
 
 	public void test() {
 		
-		Options On = new Options();
-		On.strPublic();
+		Options on = new Options();
+		on.strPublic();
 		
 	}
 

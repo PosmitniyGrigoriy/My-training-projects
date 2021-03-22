@@ -8,18 +8,18 @@ public class Start {
 
 	public static void main(String[] args) throws IOException {
 		
-		BufferedReader Input = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		
-		String Result;
+		String result;
 		
 		System.out.println("Введите число");
 		
-		Result = Input.readLine();
+		result = input.readLine();
 		
-		System.out.println("\nВы ввели: " + Result);
+		System.out.println("\nВы ввели: " + result);
 		
 		// Конвертация из строки в число
-		int Result2 = Integer.parseInt(Result);
+		int Result2 = Integer.parseInt(result);
 		System.out.println(Result2);
 		
 	}

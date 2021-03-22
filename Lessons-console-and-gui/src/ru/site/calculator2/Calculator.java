@@ -6,16 +6,12 @@ import java.awt.event.ActionEvent;
 
 public class Calculator {
 
-		
 		// Объявление всех компонентов калькулятора
 		JPanel windowContent;
 		JTextField displayField;
 		JButton button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPoint, buttonEqual, buttonPlus, buttonMinus, buttonMultiply, buttonShare;
 		JPanel p1, p2;
 		 
-	      
-		
-		
 		// В конструкторе создаются все компоненты
 		// и добавляются на фрейм с помощью комбинации
 		// Borderlayout и Gridlayout
@@ -33,8 +29,6 @@ public class Calculator {
 		// класса JButton, который принимает текст
 		// кнопки в качестве параметра
 
-		
-		
 		button0=new JButton("0");
 		button1=new JButton("1");
 		button2=new JButton("2");
@@ -46,19 +40,13 @@ public class Calculator {
 		button8=new JButton("8");
 		button9=new JButton("9");
 		
-		
-		
-		
 		buttonPoint = new JButton(".");
 		buttonEqual=new JButton("=");
-		
 		
 		buttonPlus=new JButton("+");
 		buttonMinus=new JButton("-");
 		buttonMultiply=new JButton("*");
 		buttonShare=new JButton("/");
-		
-		
 		
 		// Создаём панель с GridLayout
 		// которая содержит 12 кнопок - 10 кнопок с числами
@@ -82,8 +70,6 @@ public class Calculator {
 		// Помещаем панель p1 в центральную область окна
 		windowContent.add("Center",p1);
 		
-		
-		
 		p2 = new JPanel();
 		GridLayout gl2 = new GridLayout(4,3);
 		p2.setLayout(gl2);
@@ -94,7 +80,6 @@ public class Calculator {
 		p2.add(buttonShare);
 //		// Помещаем панель p2 в центральную область окна
 		windowContent.add("East",p2);
-		
 		
 		// При нажатии на кнопки открывается окно с уведомлением
 		CalculatorEngine calcEngine = new CalculatorEngine();
@@ -115,10 +100,6 @@ public class Calculator {
 		buttonMultiply.addActionListener(calcEngine);
 		buttonShare.addActionListener(calcEngine);
 		
-
-		
-		
-
 		//Создаём фрейм и задаём его основную панель
 		JFrame frame = new JFrame("Калькулятор");
 		frame.setContentPane(windowContent);
@@ -128,8 +109,5 @@ public class Calculator {
 		// Наконец, отображаем окно
 		frame.setVisible(true);
 		}
-		
-
-		
 		
 }

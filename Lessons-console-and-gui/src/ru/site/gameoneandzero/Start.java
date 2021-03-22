@@ -11,49 +11,49 @@ public class Start {
 		int[] playerOne = new int[5];
 		int[] playerTwo = new int[4];
 
-		Actions On = new Actions();
+		Actions on = new Actions();
 
-		On.field();
+		on.field();
 
 		if (playerOne[0] == 0) {
-			On.playerOne();
+			on.playerOne();
 		}
 
 		if (playerTwo[0] == 0) {
-			On.playerTwo();
+			on.playerTwo();
 		}
 
 		if (playerOne[1] == 0) {
-			On.playerOne();
+			on.playerOne();
 		}
 
 		if (playerTwo[1] == 0) {
-			On.playerTwo();
+			on.playerTwo();
 		}
 
 		if (playerOne[2] == 0) {
-			On.playerOne();
-			On.conditionsWin();
+			on.playerOne();
+			on.conditionsWin();
 		}
 
 		if (playerTwo[2] == 0) {
-			On.playerTwo();
-			On.conditionsWin();
+			on.playerTwo();
+			on.conditionsWin();
 		}
 
 		if (playerOne[3] == 0) {
-			On.playerOne();
-			On.conditionsWin();
+			on.playerOne();
+			on.conditionsWin();
 		}
 
 		if (playerTwo[3] == 0) {
-			On.playerTwo();
-			On.conditionsWin();
+			on.playerTwo();
+			on.conditionsWin();
 		}
 
 		if (playerOne[4] == 0) {
-			On.playerOne();
-			On.conditionsWin();
+			on.playerOne();
+			on.conditionsWin();
 		}
 
 	}

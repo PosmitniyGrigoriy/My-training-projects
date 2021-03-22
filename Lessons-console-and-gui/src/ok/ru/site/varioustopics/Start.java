@@ -11,37 +11,37 @@ public class Start {
 		
 		// в lesson 2 были выбраны люди, а не автомобили, животные
 		
-		BaseInfo Russian = new Man ("Igor", 175, 70, ColorEye.BLUE, ColorSkin.WHITE);
-		BaseInfo American = new Man2 ("Kolin", 170, 76, ColorEye.GREEN, ColorSkin.BROUN);
-		BaseInfo American2 = new Man2 ("Kolin", 170, 76, ColorEye.GREEN, ColorSkin.BROUN);
+		BaseInfo russian = new Man ("Igor", 175, 70, ColorEye.BLUE, ColorSkin.WHITE);
+		BaseInfo american = new Man2 ("Kolin", 170, 76, ColorEye.GREEN, ColorSkin.BROUN);
+		BaseInfo american2 = new Man2 ("Kolin", 170, 76, ColorEye.GREEN, ColorSkin.BROUN);
 		
-		List<BaseInfo> AllMans = new ArrayList<>();
+		List<BaseInfo> allMans = new ArrayList<>();
 		
-		AllMans.add(Russian);
-		AllMans.add(American);
-		AllMans.add(American2);
+		allMans.add(russian);
+		allMans.add(american);
+		allMans.add(american2);
 		
-		System.out.println("Коллекция: " + AllMans);
+		System.out.println("Коллекция: " + allMans);
 		System.out.println();
 		
 		double a = 4;
 		
-		Russian.addAge(2.2);
-		Russian.addAge(1);
-		American.addAge(a);
-		American2.addAge(a);
+		russian.addAge(2.2);
+		russian.addAge(1);
+		american.addAge(a);
+		american2.addAge(a);
 		
-		System.out.println(Russian);
-		System.out.println(American);
-		System.out.println(American2);
-		
-		System.out.println();
-		System.out.println("Сравнение American + Russian:   " + American.equals(Russian));
-		System.out.println("Сравнение American + American2: " + American.equals(American2));
+		System.out.println(russian);
+		System.out.println(american);
+		System.out.println(american2);
 		
 		System.out.println();
-		System.out.println("Пора ли русскому идти на прием к доктору:   " + Russian.isReadyToDoctor());
-		System.out.println("Пора ли американцу идти на прием к доктору: " + American.isReadyToDoctor());
+		System.out.println("Сравнение American + Russian:   " + american.equals(russian));
+		System.out.println("Сравнение American + American2: " + american.equals(american2));
+		
+		System.out.println();
+		System.out.println("Пора ли русскому идти на прием к доктору:   " + russian.isReadyToDoctor());
+		System.out.println("Пора ли американцу идти на прием к доктору: " + american.isReadyToDoctor());
 		
 	}
 }

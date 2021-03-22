@@ -6,10 +6,10 @@ public class v1 {
 
 	public void test() {
 		
-		Options On = new Options();
-		On.strDefault();
-		On.strProtected();
-		On.strPublic();
+		Options on = new Options();
+		on.strDefault();
+		on.strProtected();
+		on.strPublic();
 		
 	}
 

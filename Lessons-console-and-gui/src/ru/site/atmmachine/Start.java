@@ -10,8 +10,8 @@ public class Start {
 		
 		int menu, money;
 
-		Options TopUpAndWithdraw = new Options();
-		Scanner ATMMenu = new Scanner(System.in);
+		Options topUpAndWithdraw = new Options();
+		Scanner atmMenu = new Scanner(System.in);
 		
 		while (true) {
 			
@@ -24,18 +24,18 @@ public class Start {
 			System.out.println("4. Забрать карту\n");
 			System.out.println("Какую операцию хотите выполнить?");
 
-			menu = ATMMenu.nextInt();
+			menu = atmMenu.nextInt();
 
 			if (menu == 1) {
 				System.out.println("Введите сумму для пополнения.");
-				money = ATMMenu.nextInt();
-				TopUpAndWithdraw.setCash(money);
+				money = atmMenu.nextInt();
+				topUpAndWithdraw.setCash(money);
 			} else if (menu == 2) {
 				System.out.println("Введите сумму для снятия.");
-				money = ATMMenu.nextInt();
-				TopUpAndWithdraw.getCash(money);
+				money = atmMenu.nextInt();
+				topUpAndWithdraw.getCash(money);
 			} else if (menu == 3) {
-				TopUpAndWithdraw.balance();
+				topUpAndWithdraw.balance();
 			} else if (menu == 4) {
 				System.out.println("Заберите карту.");
 				System.exit(0);

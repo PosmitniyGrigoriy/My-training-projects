@@ -6,13 +6,13 @@ public class Start {
 
 	public static void main(String[] args) {
 		
-		Options On = new Options ();
-		Options On2 = new Options ("Igor", 2008);
-		Options On3 = new Options (80, 2008);
+		Options on = new Options ();
+		Options on2 = new Options ("Igor", 2008);
+		Options on3 = new Options (80, 2008);
 		
-		System.out.println(On);
-		System.out.println(On2);
-		System.out.println(On3);
+		System.out.println(on);
+		System.out.println(on2);
+		System.out.println(on3);
 		
 		
 	}

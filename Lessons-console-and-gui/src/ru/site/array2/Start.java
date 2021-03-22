@@ -8,8 +8,8 @@ public class Start {
 
 	public static void main (String[] args){
 	
-		int[] BMW = new int[3];
-		int[] Audi = new int[3];
+		int[] bmw = new int[3];
+		int[] audi = new int[3];
 		
 		int result = 0;
 		int sumBMW = 0;
@@ -24,9 +24,9 @@ public class Start {
 		String voiceAdd = "Голос принят.";
 		String votesNoCast = "Все участники опроса не верно ввели вариант ответа, поэтому были исключены. Проголосовавших нет.";
 		
-		Scanner On = new Scanner (System.in);
+		Scanner on = new Scanner (System.in);
 		
-		for (int i = 0; i < BMW.length; i++) {
+		for (int i = 0; i < bmw.length; i++) {
 			if (i == 0) {
 				System.out.println(aSurveyOfTheFirstPerson);
 			} else if (i == 1) {
@@ -34,21 +34,21 @@ public class Start {
 			} else if (i == 2) {
 				System.out.println(aSurveyOfTheThirdPerson);
 			}
-			result = On.nextInt();
+			result = on.nextInt();
 			if (result == 1) {
-				BMW[i] = 1;
+				bmw[i] = 1;
 				System.out.println(voiceAdd);
 			} else if (result == 2) {
-				Audi[i] = 1;
+				audi[i] = 1;
 				System.out.println(voiceAdd);
 			} else if (!(result == 1 & result == 2)) {
 				System.out.println(repeatVote);
-				result = On.nextInt();
+				result = on.nextInt();
 				if (result == 1) {
-					BMW[i] = 1;
+					bmw[i] = 1;
 					System.out.println(voiceAdd);
 				} else if (result == 2) {
-					Audi[i] = 1;
+					audi[i] = 1;
 					System.out.println(voiceAdd);
 				} else {
 					System.out.println(canNotVote);
@@ -66,8 +66,8 @@ public class Start {
 //		}
 		
 		// Вывод результатов вручную, указывая каждый массив
-		sumBMW = BMW[0] + BMW[1] + BMW[2];
-		sumAudi = Audi[0] + Audi[1] + Audi[2];
+		sumBMW = bmw[0] + bmw[1] + bmw[2];
+		sumAudi = audi[0] + audi[1] + audi[2];
 		
 		if (sumBMW ==0 && sumAudi == 0) {
 			System.out.println(resultVote  + "\n" + votesNoCast);

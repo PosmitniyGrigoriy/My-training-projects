@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Actions {
 
-	int motion = 0;
+	int motion2 = 0;
 
 	int[] field = new int[9];
 
 	String attention = "!!!! ¬ этой €чейке уже есть значение. ¬ыберите другую €чейку.";
 
-	Scanner Motion = new Scanner(System.in);
+	Scanner motion = new Scanner(System.in);
 
 	public void field() {
 		System.out.println("ƒобро пожаловать в игру нолики-единицы!\n");
@@ -23,64 +23,64 @@ public class Actions {
 	public void playerOne() {
 		System.out.println("---------");
 		System.out.println("ѕервый игрок. ”кажите пустую €чейку с 1 по 9.");
-		motion = Motion.nextInt();
-		if (motion == 1) {
+		motion2 = motion.nextInt();
+		if (motion2 == 1) {
 			if (field[0] == 0) {
 				field[0] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 2) {
+		} else if (motion2 == 2) {
 			if (field[1] == 0) {
 				field[1] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 3) {
+		} else if (motion2 == 3) {
 			if (field[2] == 0) {
 				field[2] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 4) {
+		} else if (motion2 == 4) {
 			if (field[3] == 0) {
 				field[3] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 5) {
+		} else if (motion2 == 5) {
 			if (field[4] == 0) {
 				field[4] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 6) {
+		} else if (motion2 == 6) {
 			if (field[5] == 0) {
 				field[5] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 7) {
+		} else if (motion2 == 7) {
 			if (field[6] == 0) {
 				field[6] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 8) {
+		} else if (motion2 == 8) {
 			if (field[7] == 0) {
 				field[7] = 1;
 			} else {
 				System.out.println(attention);
 				playerOne();
 			}
-		} else if (motion == 9) {
+		} else if (motion2 == 9) {
 			if (field[8] == 0) {
 				field[8] = 1;
 			} else {
@@ -97,64 +97,64 @@ public class Actions {
 	public void playerTwo() {
 		System.out.println("---------");
 		System.out.println("¬торой игрок. ”кажите пустую €чейку с 1 по 9.");
-		motion = Motion.nextInt();
-		if (motion == 1) {
+		motion2 = motion.nextInt();
+		if (motion2 == 1) {
 			if (field[0] == 0) {
 				field[0] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 2) {
+		} else if (motion2 == 2) {
 			if (field[1] == 0) {
 				field[1] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 3) {
+		} else if (motion2 == 3) {
 			if (field[2] == 0) {
 				field[2] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 4) {
+		} else if (motion2 == 4) {
 			if (field[3] == 0) {
 				field[3] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 5) {
+		} else if (motion2 == 5) {
 			if (field[4] == 0) {
 				field[4] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 6) {
+		} else if (motion2 == 6) {
 			if (field[5] == 0) {
 				field[5] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 7) {
+		} else if (motion2 == 7) {
 			if (field[6] == 0) {
 				field[6] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 8) {
+		} else if (motion2 == 8) {
 			if (field[7] == 0) {
 				field[7] = 2;
 			} else {
 				System.out.println(attention);
 				playerTwo();
 			}
-		} else if (motion == 9) {
+		} else if (motion2 == 9) {
 			if (field[8] == 0) {
 				field[8] = 2;
 			} else {

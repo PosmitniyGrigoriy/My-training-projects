@@ -19,13 +19,13 @@ public class Start {
 		Score scores[] = new Score[3];
 		
 		
-		Score Score0 = new Score("Николай", "Смирнов", 250, today);
-		Score Score1 = new Score("Анна", "Егорова", 300, today);
-		Score Score2 = new Score("Сергей", "Данилов", 190, today);
+		Score score0 = new Score("Николай", "Смирнов", 250, today);
+		Score score1 = new Score("Анна", "Егорова", 300, today);
+		Score score2 = new Score("Сергей", "Данилов", 190, today);
 		
-		scores[0] = Score0;
-		scores[1] = Score1;
-		scores[2] = Score2;
+		scores[0] = score0;
+		scores[1] = score1;
+		scores[2] = score2;
 		
 		try {
 			myFile = new FileWriter("c:\\java\\scores2.txt");

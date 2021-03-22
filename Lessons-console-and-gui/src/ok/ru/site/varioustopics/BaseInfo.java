@@ -5,16 +5,16 @@ public abstract class BaseInfo implements Doctor {
 	String name;
 	int height;
 	int weight;
-	ColorEye ColorEye;
-	ColorSkin ColorSkin;
+	ColorEye colorEye;
+	ColorSkin colorSkin;
 	protected double age = 18;
 	
-	public BaseInfo(String name, int height, int weight, ColorEye ColorEye, ColorSkin ColorSkin) {
+	public BaseInfo(String name, int height, int weight, ColorEye colorEye, ColorSkin colorSkin) {
 		this.name = name;
 		this.height = height;
 		this.weight = weight;
-		this.ColorEye = ColorEye;
-		this.ColorSkin = ColorSkin;
+		this.colorEye = colorEye;
+		this.colorSkin = colorSkin;
 	}
 
 	public void addAge (int addAge2) {
@@ -38,16 +38,16 @@ public abstract class BaseInfo implements Doctor {
 
 	@Override
 	public String toString() {
-		return "BaseInfo [name=" + name + ", height=" + height + ", weight=" + weight + ", ColorEye=" + ColorEye
-				+ ", ColorSkin=" + ColorSkin + ", age=" + age + "]";
+		return "BaseInfo [name=" + name + ", height=" + height + ", weight=" + weight + ", ColorEye=" + colorEye
+				+ ", ColorSkin=" + colorSkin + ", age=" + age + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((ColorEye == null) ? 0 : ColorEye.hashCode());
-		result = prime * result + ((ColorSkin == null) ? 0 : ColorSkin.hashCode());
+		result = prime * result + ((colorEye == null) ? 0 : colorEye.hashCode());
+		result = prime * result + ((colorSkin == null) ? 0 : colorSkin.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(age);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -66,9 +66,9 @@ public abstract class BaseInfo implements Doctor {
 		if (getClass() != obj.getClass())
 			return false;
 		BaseInfo other = (BaseInfo) obj;
-		if (ColorEye != other.ColorEye)
+		if (colorEye != other.colorEye)
 			return false;
-		if (ColorSkin != other.ColorSkin)
+		if (colorSkin != other.colorSkin)
 			return false;
 		if (Double.doubleToLongBits(age) != Double.doubleToLongBits(other.age))
 			return false;

@@ -5,10 +5,10 @@ package ru.site.getandset;
 public class Start {
 
 	public static void main(String[] args) {
-		Options On = new Options ();
-		On.setOilCar(3);
-		On.setOilCar(2);
-		System.out.println(On.getOilCar());
+		Options on = new Options ();
+		on.setOilCar(3);
+		on.setOilCar(2);
+		System.out.println(on.getOilCar());
 	}
 
 }
