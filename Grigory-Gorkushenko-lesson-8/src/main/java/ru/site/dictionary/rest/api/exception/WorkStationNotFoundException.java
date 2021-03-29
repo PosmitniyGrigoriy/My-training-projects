@@ -4,6 +4,6 @@ public class WorkStationNotFoundException extends Exception {
    private long workStation_id;
    
    public WorkStationNotFoundException(long workStationId) {
-       super(String.format("Word is not found with id : '%s'", workStationId));
+       super(String.format("Workstation is not found with id : '%s'", workStationId));
    }
 }

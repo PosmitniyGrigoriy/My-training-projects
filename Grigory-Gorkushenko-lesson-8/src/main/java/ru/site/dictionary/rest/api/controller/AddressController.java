@@ -14,21 +14,21 @@ import java.util.List;
 public class AddressController {
 
    @Autowired
-   AddressRepository AddressRepository;
+   AddressRepository addressRepository;
    
    @GetMapping("/address")
    public List getAllNotes() {
-       return AddressRepository.findAll();
+       return addressRepository.findAll();
    }
    
    @PostMapping("/address")
    public Address createNote(@Valid @RequestBody Address address) {
-       return AddressRepository.save(address);
+       return addressRepository.save(address);
    }
    
    @GetMapping("/address/{id}")
    public Address getNoteById(@PathVariable(value = "id") Long addressId) throws AddressNotFoundException {
-       return AddressRepository.findById(addressId)
+       return addressRepository.findById(addressId)
                .orElseThrow(() -> new AddressNotFoundException(addressId));
    }
    
@@ -36,7 +36,7 @@ public class AddressController {
    public Address updateNote(@PathVariable(value = "id") Long addressId,
                           @Valid @RequestBody Address addressDetails) throws AddressNotFoundException {
        
-	   Address address = AddressRepository.findById(addressId)
+	   Address address = addressRepository.findById(addressId)
                .orElseThrow(() -> new AddressNotFoundException(addressId));
        
 //       address.setWords(addressDetails.getWords());
@@ -44,16 +44,16 @@ public class AddressController {
 //       address.setTranscriptions(addressDetails.getTranscriptions());
 //       address.setTranslations(addressDetails.getTranslations());
        
-	   Address updatedAddress = AddressRepository.save(address);
+	   Address updatedAddress = addressRepository.save(address);
        return updatedAddress;
    }
    
    @DeleteMapping("/address/{id}")
    public ResponseEntity deleteDictionary(@PathVariable(value = "id") Long addressId) throws AddressNotFoundException {
-	   Address address = AddressRepository.findById(addressId)
+	   Address address = addressRepository.findById(addressId)
                .orElseThrow(() -> new AddressNotFoundException(addressId));
        
-	   AddressRepository.delete(address);
+	   addressRepository.delete(address);
        return ResponseEntity.ok().build();
    }
 }

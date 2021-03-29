@@ -4,6 +4,6 @@ public class UserNotFoundException extends Exception {
    private long user_id;
    
    public UserNotFoundException(long userId) {
-       super(String.format("Word is not found with id : '%s'", userId));
+       super(String.format("User is not found with id : '%s'", userId));
    }
 }

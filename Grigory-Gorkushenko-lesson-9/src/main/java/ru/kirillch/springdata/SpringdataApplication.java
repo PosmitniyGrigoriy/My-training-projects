@@ -3,11 +3,12 @@ package ru.kirillch.springdata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import ru.kirillch.springdata.entity.Person;
 import ru.kirillch.springdata.jdbc.PersonJdbcDao;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class SpringdataApplication implements CommandLineRunner{
 
 	public static void main(String[] args) {

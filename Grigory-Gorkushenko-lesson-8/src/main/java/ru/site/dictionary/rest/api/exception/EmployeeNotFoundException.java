@@ -4,6 +4,6 @@ public class EmployeeNotFoundException extends Exception {
    private long employee_id;
    
    public EmployeeNotFoundException(long employeeId) {
-       super(String.format("Word is not found with id : '%s'", employeeId));
+       super(String.format("Employee is not found with id : '%s'", employeeId));
    }
 }
