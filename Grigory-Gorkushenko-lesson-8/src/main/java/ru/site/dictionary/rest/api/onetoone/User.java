@@ -1,7 +1,7 @@
 package ru.site.dictionary.rest.api.onetoone;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "users")
@@ -11,13 +11,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
     private Long user_id;
+    
+    @NotBlank
     private String firstName;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     @MapsId
-    @JoinColumn(name = "user_id")
-    private Address address;
+    private Address addressPeople;
 
     public User(){
         super();

@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 public class Address {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "address_id")
     private Long address_id;
     
@@ -16,9 +17,8 @@ public class Address {
 
     @OneToOne
     @MapsId
-    @JoinColumn(name = "address_id")
-    private User user;
-   
+    @JoinColumn(name = "user_id")
+    private User user_id;
     
     public Address(){
         super();
