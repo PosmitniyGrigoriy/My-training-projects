@@ -23,10 +23,10 @@ public class User {
     
     
     @ JoinColumn (name = "address_id")
-    private int addressId;
+    private int address_id;
 
     @OneToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "adress_id")
+    @JoinColumn(name = "address_id", referencedColumnName = "address_id")
     private Address address;
     
     

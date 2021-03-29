@@ -15,7 +15,7 @@ public class Address {
     @NotBlank
     private String addressPeople;
 
-    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "address_id", cascade = CascadeType.ALL)
     private User user;
     
     public Address(){
