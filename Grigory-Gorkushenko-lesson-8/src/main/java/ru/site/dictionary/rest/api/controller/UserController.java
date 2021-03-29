@@ -39,10 +39,8 @@ public class UserController {
 	   User user = UserRepository.findById(userId)
                .orElseThrow(() -> new UserNotFoundException(userId));
        
-//       user.setWords(userDetails.getWords());
-//       user.setRepetitions(userDetails.getRepetitions());
-//       user.setTranscriptions(userDetails.getTranscriptions());
-//       user.setTranslations(userDetails.getTranslations());
+       user.setFirstName(userDetails.getFirstName());
+       user.setAddressPeople(userDetails.getAddressPeople());
        
        User updatedUser = UserRepository.save(user);
        return updatedUser;
