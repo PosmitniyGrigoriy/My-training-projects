@@ -8,11 +8,11 @@
 		<version>2.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ru.site.jdbc</groupId>
+	<groupId>ru.site.jpa</groupId>
 	<artifactId>springdata</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springdata</name>
-	<description>JDBC</description>
+	<description>JPA</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
