@@ -10,19 +10,10 @@ public class Address {
     @Id
     @Column(name = "user_id")
     private Long id;
-    
-    @NotBlank
-    private String firstName;
-    
-    @NotBlank
-    private String addressPeople;
-
-    //...
 
     @OneToOne
     @MapsId
     @JoinColumn(name = "user_id")
     private User user;
    
-    //... getters and setters
 }
