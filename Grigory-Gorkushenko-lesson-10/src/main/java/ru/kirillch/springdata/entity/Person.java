@@ -1,8 +1,11 @@
 package ru.kirillch.springdata.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Person {
@@ -14,6 +17,10 @@ public class Person {
     private String firstName;
     private String lastName;
     private String address;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "passport_id")
+    private Passport passport;
 
     public Person() {
     }
@@ -56,13 +63,18 @@ public class Person {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "\nPerson{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
+    public Passport getPassport() {
+		return passport;
+	}
+
+	public void setPassport(Passport passport) {
+		this.passport = passport;
+	}
+
+	@Override
+	public String toString() {
+		return "\nPerson [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", address=" + address
+				+ ", passport=" + passport + "]";
+	}
+	
 }

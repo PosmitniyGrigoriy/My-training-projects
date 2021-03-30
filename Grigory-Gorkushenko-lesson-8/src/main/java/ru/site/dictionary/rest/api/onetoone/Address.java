@@ -44,4 +44,47 @@ public class Address {
         this.addressPeople = addressPeople;
     }
     
+    
+    
+    
+    
+    
+//    @Entity
+//    @Table(name = "users")
+//    public class User {
+//         
+//        @Id
+//        @Column(name = "id")
+//        @GeneratedValue(strategy = GenerationType.AUTO)
+//        private Long id;
+//         
+//        @OneToOne(cascade = CascadeType.ALL)
+//        @JoinTable(name = "user_passport",
+//            joinColumns = @JoinColumn(name="user_id"),
+//            inverseJoinColumns = @JoinColumn(name="passport_id")
+//        )
+//        private Passport passport;
+//    }
+//
+//
+//
+//
+//    @Entity
+//    @Table(name = "passports")
+//    public class Passport {
+//     
+//        @Id
+//        @Column(name = "id")
+//        @GeneratedValue(strategy = GenerationType.AUTO)
+//        private Long id;
+//         
+//        @OneToOne(mappedBy = "passport")
+//        private User user;
+//    }
+    
+    
+    
+    
+    
+    
 }
