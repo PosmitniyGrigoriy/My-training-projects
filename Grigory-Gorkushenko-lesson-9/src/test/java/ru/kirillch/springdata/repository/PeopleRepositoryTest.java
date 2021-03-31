@@ -5,30 +5,32 @@
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.test.context.junit4.SpringRunner;
-//import ru.kirillch.springdata.entity.Person;
+//import ru.site.dictionary.rest.api.model.People;
+//import ru.site.dictionary.rest.api.repository.PeopleRepository;
+//
 //import java.util.List;
 //import static org.assertj.core.api.Assertions.assertThat;
 //
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
-//public class PersonRepositoryTest {
+//public class PeopleRepositoryTest {
 //
 //    @Autowired
-//    PersonRepository personRepository;
+//    PeopleRepository peopleRepository;
 //
-//    @Test
-//    public void findByFirstName() throws Exception {
-//
-//        List<Person> people = personRepository.findByFirstName("Anna");
-//
-//        assertThat(people).hasSize(1);
-//        assertThat(people.get(0).getLastName()).isEqualTo("Andreeva");
-//
-//    }
+////    @Test
+////    public void findByFirstName() throws Exception {
+////
+////        List<People> people = peopleRepository.findByFirstName("Anna");
+////
+////        assertThat(people).hasSize(1);
+////        assertThat(people.get(0).getLastName()).isEqualTo("Andreeva");
+////
+////    }
 //
 //    @Test
 //    public void findAllOrderedByFirstName() throws Exception {
-//        List<Person> people = personRepository.findAllOrderedByFirstName();
+//        List<People> people = peopleRepository.findAllOrderedByFirstName();
 //
 //        assertThat(people).hasSize(3);
 //        assertThat(people.get(2).getFirstName()).isEqualTo("Olesya");
