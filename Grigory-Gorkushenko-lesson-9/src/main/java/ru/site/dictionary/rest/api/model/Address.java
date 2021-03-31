@@ -3,6 +3,8 @@ package ru.site.dictionary.rest.api.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "address")
 public class Address {
@@ -11,14 +13,8 @@ public class Address {
 	@GeneratedValue
 	private Long id;
 
-	
-	
 	@NotBlank
 	private String country;
-	
-	
-	
-	
 	
 	@NotBlank
 	private String city;
@@ -29,21 +25,13 @@ public class Address {
 	private int house;
 	private int apartment;
 
-	
-	
-	
-	@OneToOne(mappedBy = "country", cascade = CascadeType.ALL)
-//	@OneToOne(mappedBy = "country", "city", "street", "house", "apartment", cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "address", cascade = CascadeType.ALL)
+	@JsonIgnore
 	private People people;
 	
 	public Address() {
 		super();
 	}
-	
-	
-//	public Address(String country) {
-//		this.country = country;
-//	}
 	
 	public Address(String country, String city, String street, int house, int apartment) {
 		this.country = country;
@@ -61,10 +49,6 @@ public class Address {
 		this.id = id;
 	}
 	
-	
-	
-	
-	
 	public String getCountry() {
 		return country;
 	}
@@ -72,10 +56,6 @@ public class Address {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
-	
-	
-	
 	
 	public String getCity() {
 		return city;
@@ -109,16 +89,12 @@ public class Address {
 		this.apartment = apartment;
 	}
 	
-	
-	
-	
-	// Это должно быть в комментах, чтобы не было рекурсии по выводу текста в браузере
-//	public People getPeople() {
-//		return people;
-//	}
-//
-//	public void setPeople(People people) {
-//		this.people = people;
-//	}
+	public People getPeople() {
+		return people;
+	}
+
+	public void setPeople(People people) {
+		this.people = people;
+	}
 	
 }

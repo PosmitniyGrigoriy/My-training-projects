@@ -39,10 +39,10 @@ public class DictionaryController {
        Dictionary dictionary = dictionaryRepository.findById(dictionaryId)
                .orElseThrow(() -> new DictionaryNotFoundException(dictionaryId));
        
-       dictionary.setWords(dictionaryDetails.getWords());
-       dictionary.setRepetitions(dictionaryDetails.getRepetitions());
-       dictionary.setTranscriptions(dictionaryDetails.getTranscriptions());
-       dictionary.setTranslations(dictionaryDetails.getTranslations());
+       dictionary.setWord(dictionaryDetails.getWord());
+       dictionary.setRepetition(dictionaryDetails.getRepetition());
+       dictionary.setTranscription(dictionaryDetails.getTranscription());
+       dictionary.setTranslation(dictionaryDetails.getTranslation());
        
        Dictionary updatedDictionary = dictionaryRepository.save(dictionary);
        return updatedDictionary;

@@ -12,27 +12,27 @@ public class Dictionary {
    private Long id;
    
    @NotBlank
-   private String words;
+   private String word;
 
-   private int repetitions;
+   private int repetition;
 
    @NotBlank
-   private String transcriptions;
+   private String transcription;
    
    @NotBlank
-   private String translations;
+   private String translation;
 
    public Dictionary(){
        super();
    }
 
-   public Dictionary(Long id, String words, int repetitions, String transcriptions, String translations) {
+   public Dictionary(Long id, String word, int repetition, String transcription, String translation) {
        super();
        this.id = id;
-       this.words = words;
-       this.repetitions = repetitions;
-       this.transcriptions = transcriptions;
-       this.translations = translations;
+       this.word = word;
+       this.repetition = repetition;
+       this.transcription = transcription;
+       this.translation = translation;
    }
    
    public Long getId() {
@@ -43,36 +43,36 @@ public class Dictionary {
        this.id = id;
    }
 
-   public String getWords() {
-       return words;
+   public String getWord() {
+       return word;
    }
    
-   public void setWords(String words) {
-       this.words = words;
+   public void setWord(String word) {
+       this.word = word;
    }
 
-   public int getRepetitions() {
-       return repetitions;
+   public int getRepetition() {
+       return repetition;
    }
 
-   public void setRepetitions(int repetitions) {
-       this.repetitions = repetitions;
+   public void setRepetition(int repetition) {
+       this.repetition = repetition;
    }
 
-   public String getTranscriptions() {
-       return transcriptions;
+   public String getTranscription() {
+       return transcription;
    }
 
-   public void setTranscriptions(String transcriptions) {
-       this.transcriptions = transcriptions;
+   public void setTranscription(String transcription) {
+       this.transcription = transcription;
    }
    
-   public String getTranslations() {
-       return translations;
+   public String getTranslation() {
+       return translation;
    }
 
-   public void setTranslations(String translations) {
-       this.translations = translations;
+   public void setTranslation(String translation) {
+       this.translation = translation;
    }
    
 }
