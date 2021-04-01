@@ -14,21 +14,21 @@ import java.util.List;
 public class DictionaryController {
 
    @Autowired
-   DictionaryRepository DictionaryRepository;
+   DictionaryRepository dictionaryRepository;
    
    @GetMapping("/dictionary")
    public List getAllNotes() {
-       return DictionaryRepository.findAll();
+       return dictionaryRepository.findAll();
    }
    
    @PostMapping("/dictionary")
    public Dictionary createNote(@Valid @RequestBody Dictionary dictionary) {
-       return DictionaryRepository.save(dictionary);
+       return dictionaryRepository.save(dictionary);
    }
    
    @GetMapping("/dictionary/{id}")
    public Dictionary getNoteById(@PathVariable(value = "id") Long dictionaryId) throws DictionaryNotFoundException {
-       return DictionaryRepository.findById(dictionaryId)
+       return dictionaryRepository.findById(dictionaryId)
                .orElseThrow(() -> new DictionaryNotFoundException(dictionaryId));
    }
    
@@ -36,7 +36,7 @@ public class DictionaryController {
    public Dictionary updateNote(@PathVariable(value = "id") Long dictionaryId,
                           @Valid @RequestBody Dictionary dictionaryDetails) throws DictionaryNotFoundException {
        
-       Dictionary dictionary = DictionaryRepository.findById(dictionaryId)
+       Dictionary dictionary = dictionaryRepository.findById(dictionaryId)
                .orElseThrow(() -> new DictionaryNotFoundException(dictionaryId));
        
        dictionary.setWord(dictionaryDetails.getWord());
@@ -44,16 +44,16 @@ public class DictionaryController {
        dictionary.setTranscription(dictionaryDetails.getTranscription());
        dictionary.setTranslation(dictionaryDetails.getTranslation());
        
-       Dictionary updatedDictionary = DictionaryRepository.save(dictionary);
+       Dictionary updatedDictionary = dictionaryRepository.save(dictionary);
        return updatedDictionary;
    }
    
    @DeleteMapping("/dictionary/{id}")
    public ResponseEntity deleteDictionary(@PathVariable(value = "id") Long dictionaryId) throws DictionaryNotFoundException {
-       Dictionary dictionary = DictionaryRepository.findById(dictionaryId)
+       Dictionary dictionary = dictionaryRepository.findById(dictionaryId)
                .orElseThrow(() -> new DictionaryNotFoundException(dictionaryId));
        
-       DictionaryRepository.delete(dictionary);
+       dictionaryRepository.delete(dictionary);
        return ResponseEntity.ok().build();
    }
 }
