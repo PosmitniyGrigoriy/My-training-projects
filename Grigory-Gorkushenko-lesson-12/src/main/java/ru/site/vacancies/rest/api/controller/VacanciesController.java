@@ -25,9 +25,10 @@ public class VacanciesController {
 	@GetMapping("/vacancies/marked")
 	public List getAllVacanciesMarked(Marked marked) {
 		List vacanciesList = vacanciesRepository.findAll();
-		if (marked == true) {
-			
-		}
+	
+		
+		return result;
+		
 	}
 
 	@PostMapping("/vacancies")
