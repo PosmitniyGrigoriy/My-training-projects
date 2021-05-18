@@ -31,17 +31,17 @@ public class Start {
 		cars.add(car7);
 		
 		// Сортирует автомобили по цене (от меньшей к большей)
-//		Comparator priceCar = new priceCarComparator();
+//		Comparator priceCar = new PriceCarComparator();
 //		Collections.sort(cars, priceCar);
 //		System.out.println(cars);
 		
 		// Сортирует модели автомобилей (от A до Z)
-//		Comparator modelCar = new modelCarComparator();
+//		Comparator modelCar = new ModelCarComparator();
 //		Collections.sort(cars, modelCar);
 //		System.out.println(cars);
 		
 		// Сортирует модели автомобилей (от A до Z), если модели одинаковые, то сортирует по цене (от меньшей к большей)
-//		Comparator modelAndPriceCar = new modelAndPriceCarComparator();
+//		Comparator modelAndPriceCar = new ModelAndPriceCarComparator();
 //		Collections.sort(cars, modelAndPriceCar);
 //		System.out.println(cars);
 		
