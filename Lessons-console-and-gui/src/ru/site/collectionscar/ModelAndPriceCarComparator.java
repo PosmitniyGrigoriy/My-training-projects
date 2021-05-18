@@ -2,7 +2,7 @@ package ru.site.collectionscar;
 
 import java.util.Comparator;
 
-public class modelAndPriceCarComparator implements Comparator<Car> {
+public class ModelAndPriceCarComparator implements Comparator<Car> {
 	
 	@Override
 	public int compare(Car car1, Car car2) {
