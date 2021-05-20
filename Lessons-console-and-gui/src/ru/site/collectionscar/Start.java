@@ -14,22 +14,14 @@ public class Start {
 
 	public static void main(String[] args) {
 		
-		Car car1 = new Car(Model.BMW, 5000, Color.BLACK);
-		Car car2 = new Car(Model.AUDI, 3500, Color.BLUE);
-		Car car3 = new Car(Model.FIAT, 4000, Color.BLACK);
-		Car car4 = new Car(Model.TOYOTA, 3850, Color.WHITE);
-		Car car5 = new Car(Model.TOYOTA, 2100, Color.YELLOW);
-		Car car6 = new Car(Model.FIAT, 8000, Color.PINK);
-		Car car7 = new Car(Model.AUDI, 6400, Color.GREEN);
-		
 		ArrayList<Car> cars = new ArrayList<>();
-		cars.add(car1);
-		cars.add(car2);
-		cars.add(car3);
-		cars.add(car4);
-		cars.add(car5);
-		cars.add(car6);
-		cars.add(car7);
+		cars.add(new Car(Model.BMW, 5000, Color.BLACK));
+		cars.add(new Car(Model.AUDI, 3500, Color.BLUE));
+		cars.add(new Car(Model.FIAT, 4000, Color.BLACK));
+		cars.add(new Car(Model.TOYOTA, 3850, Color.WHITE));
+		cars.add(new Car(Model.TOYOTA, 2100, Color.YELLOW));
+		cars.add(new Car(Model.FIAT, 8000, Color.PINK));
+		cars.add(new Car(Model.AUDI, 6400, Color.GREEN));
 		
 		// —ортирует автомобили по цене (от меньшей к большей)
 //		Comparator priceCar = new PriceCarComparator();

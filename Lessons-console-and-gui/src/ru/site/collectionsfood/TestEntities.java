@@ -14,6 +14,7 @@ public class TestEntities {
 		listFoods.add(new Food(Type.ОВОЩИ, "Огурец"));
 		listFoods.add(new Food(Type.ОВОЩИ, "Картошка"));
 		listFoods.add(new Food(Type.ОВОЩИ, "Морковь"));
+		listFoods.add(new Food(Type.ОВОЩИ, "Морковь"));
 		
 		listFoods.add(new Food(Type.ФРУКТЫ, "Манго"));
 		listFoods.add(new Food(Type.ФРУКТЫ, "Грейпфрукт"));
@@ -22,6 +23,7 @@ public class TestEntities {
 		listFoods.add(new Food(Type.ФРУКТЫ, "Киви"));
 		listFoods.add(new Food(Type.ФРУКТЫ, "Яблоко"));
 		listFoods.add(new Food(Type.ФРУКТЫ, "Груша"));
+		listFoods.add(new Food(Type.ФРУКТЫ, "Банан"));
 		listFoods.add(new Food(Type.ФРУКТЫ, "Банан"));
 		
 		listFoods.add(new Food(Type.ЯГОДЫ, "Клубника"));
