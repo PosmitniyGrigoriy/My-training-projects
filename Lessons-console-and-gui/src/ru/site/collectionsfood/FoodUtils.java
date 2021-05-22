@@ -35,7 +35,7 @@ public class FoodUtils {
 		return mapFoodsByType;
 	}
 	
-	public static Map<String, Integer> numberOfProductsOfEachTypeCounted (List<Food> listFoods) {
+	public static Map<String, Integer> numberOfProductsOfEachTypeCounted(List<Food> listFoods) {
 		Map<String, Integer> mapFoods = new HashMap<>();
 		int count = 0;
 		for(Food food : listFoods) {
@@ -53,12 +53,22 @@ public class FoodUtils {
 		List<Food> listFoods = new ArrayList<>();
 		for (Map.Entry<Type, List<String>> entry : mapFoods.entrySet()) {
 			for(String nameFood : entry.getValue()) {
-				Food food = new Food(entry.getKey(), nameFood);
-				listFoods.add(food);
+				listFoods.add(new Food(entry.getKey(), nameFood));
 			}
 		}
 //		System.out.println(listFoods);
 		return listFoods;
 	}
-		
+	
+	public static Set<String> creatingMultipleProductNames(Map<Type, List<String>> mapFoods) {
+		Set<String> setFoods = new HashSet<>();
+		for(Map.Entry<Type, List<String>> entry : mapFoods.entrySet()) {
+			for(String nameFood : entry.getValue()) {
+				setFoods.add(nameFood);
+			}
+		}
+//		System.out.println(setFoods);
+		return setFoods;
+	}
+	
 }
