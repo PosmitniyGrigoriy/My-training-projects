@@ -108,6 +108,7 @@ interface TTT {
 // Ниже будет тема сравнения объектов
 
 class q33{
+
     public static void main(String[] args) {
         q33 q33 = new q33();
         TTT ttt = new Employee52();
@@ -116,12 +117,25 @@ class q33{
         Employee52 emp2 = new Driver52();
         Employee52 emp3 = new Doctor52();
 
+        System.out.println(1 == 1); // true
+        System.out.println(1 == 2); // false
+        System.out.println(1 == 1); // true
+//        System.out.println(1.equals(2)); // У готовых значений нет метода equals
+        int a = 5;
+//        System.out.println(a.equals(5)); // У готовых переменных, в которых значения, нет метода equals
+
+        Integer b = new Integer(5);
+        System.out.println("0: " + b.equals(5)); // true
+        System.out.println("0: " + b.equals(10)); // false
+
+//        equals - у объекта, а == у цифр.
+
         System.out.println(emp == emp1); // false. emp и emp1 могут ссылаться на один объект. В данном случае на объект Teacher52.
         System.out.println(emp == emp2); // false
         System.out.println(emp == emp3); // false
         System.out.println(emp == ttt); // false
 //        System.out.println(emp == q33); // Будет компиляционная ошибка. Нельзя сравнить два разных класса через ==. Объекты нельзя сравнивать через ==, так как у них нет отношения is a.
-        System.out.println(emp.equals(q33)); // А так сравнивать можно объекты (как разные объекты - разных классов, так объекты одного класса). Так как используется иквелс.
+        System.out.println(emp.equals(ttt)); // А так сравнивать можно объекты (как разные объекты - разных классов, так объекты одного класса). Так как используется иквелс.
         System.out.println("--------");
         System.out.println(emp1 == emp); // false
         System.out.println(emp1 == emp2); // false
