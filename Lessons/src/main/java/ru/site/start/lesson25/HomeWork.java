@@ -16,8 +16,8 @@ public class HomeWork {
         Speakable a10 = new Pingvin("Имя 10");
         Speakable a11 = new Lev("Имя 11");
 
-        Speakable[] arraySpeakables = { a5, a6, a8, a9, a10, a11 };
-        Animal3[] arrayAnimals = { a1, a2, a3, a4, a5, a6, a7, a8, a9 };
+        Speakable[] arraySpeakables = {a5, a6, a8, a9, a10, a11};
+        Animal3[] arrayAnimals = {a1, a2, a3, a4, a5, a6, a7, a8, a9};
 
         System.out.println("Эти объекты связаны с интерфейсом Speakable");
         System.out.println("\n==========================================\nОбъекты, связанные с Animal3\n");
@@ -95,168 +95,164 @@ public class HomeWork {
         }
 
         System.out.println("\nЭти объекты связаны с абстрактным классом Animal3");
-        System.out.println("\n==========================================\nОбъекты, связанные с Bird\n");
-        for (Speakable entity : arraySpeakables) {
+        for (Animal3 entity : arrayAnimals) {
             if (entity instanceof Bird) {
-                Bird b = (Bird)entity;
+                Bird b = (Bird) entity;
                 System.out.println(b.name);
                 b.eat();
                 b.sleep();
                 b.speek();
                 b.fly();
+            } else {
+                if (entity instanceof Mammal) {
+                    Mammal m = (Mammal) entity;
+                    System.out.println(m.name);
+                    m.run();
+                    m.eat();
+                    m.speek();
+                    m.sleep();
+                }
             }
         }
-        System.out.println("\n==========================================\nОбъекты, связанные с Mammal\n");
-        for(Animal3 entity : arrayAnimals) {
-            if(entity instanceof Mammal) {
-                Mammal m = (Mammal)entity;
-                System.out.println(m.name);
-                m.run();
-                m.eat();
-                m.speek();
-                m.sleep();
-            }
+
+    }
+
+}
+
+    abstract class Animal3 {
+
+        String name;
+
+        Animal3(String name) {
+            this.name = name;
+        }
+
+        abstract void eat();
+
+        abstract void sleep();
+
+    }
+
+    abstract class Fish extends Animal3 {
+
+        String name;
+
+        Fish(String name) {
+            super(name);
+            this.name = name;
+        }
+
+        void sleep() {
+            System.out.println("Vsegda interesno nablydat, kak spyat ribi");
+        }
+
+        abstract void swim();
+
+    }
+
+    abstract class Bird extends Animal3 implements Speakable {
+
+        String name;
+
+        Bird(String name) {
+            super(name);
+            this.name = name;
+        }
+
+        abstract void fly();
+
+        public void speek() {
+            System.out.println("Somebody speaks sings");
         }
 
     }
 
-}
+    abstract class Mammal extends Animal3 implements Speakable {
 
-abstract class Animal3 {
+        String name;
 
-    String name;
+        Mammal(String name) {
+            super(name);
+            this.name = name;
+        }
 
-    Animal3(String name) {
-        this.name = name;
+        abstract void run();
+
     }
 
-    abstract void eat();
-    abstract void sleep();
+    interface Speakable {
 
-}
+        default void speek() {
+            System.out.println("Somebody speaks");
+        }
 
-abstract class Fish extends Animal3 {
-
-    String name;
-
-    Fish(String name) {
-        super(name);
-        this.name = name;
     }
 
-    void sleep() {
-        System.out.println("Vsegda interesno nablydat, kak spyat ribi");
+    class Mechenosec extends Fish {
+
+        String name;
+
+        Mechenosec(String name) {
+            super(name);
+            this.name = name;
+        }
+
+        public void swim() {
+            System.out.println("Mechenosec krasivaya riba, kotoraya bistro plavaet!");
+        }
+
+        public void eat() {
+            System.out.println("Mechenosec ne xishnaya riba, ona est obichniy ribiy korm!");
+        }
+
     }
 
-    abstract void swim();
+    class Pingvin extends Bird {
 
-}
+        String name;
 
-abstract class Bird extends Animal3 implements Speakable {
+        Pingvin(String name) {
+            super(name);
+            this.name = name;
+        }
 
-    String name;
+        public void eat() {
+            System.out.println("Pingvin lyubit est ribu!");
+        }
 
-    Bird(String name) {
-        super(name);
-        this.name = name;
+        public void sleep() {
+            System.out.println("Pingvini spyat prijavshis drug k drugu!");
+        }
+
+        public void fly() {
+            System.out.println("Pingvini ne umeyut letat!");
+        }
+
+        public void speak() {
+            System.out.println("Pingvini ne umeyut pet kak solovyi");
+        }
+
     }
 
-    abstract void fly();
+    class Lev extends Mammal {
 
-    public void speek() {
-        System.out.println("Somebody speaks sings");
+        String name;
+
+        Lev(String name) {
+            super(name);
+            this.name = name;
+        }
+
+        public void eat() {
+            System.out.println("Lev, kak lyuboy sishnik, lyubit myaso!");
+        }
+
+        public void sleep() {
+            System.out.println("Bolshuyu chast dnya lev spit!");
+        }
+
+        public void run() {
+            System.out.println("Lev - eto ne samaya bistraya koshka!");
+        }
+
     }
-
-}
-
-abstract class Mammal extends Animal3 implements Speakable {
-
-    String name;
-
-    Mammal(String name) {
-        super(name);
-        this.name = name;
-    }
-
-    abstract void run();
-
-}
-
-interface Speakable {
-
-    default void speek() {
-        System.out.println("Somebody speaks");
-    }
-
-}
-
-class Mechenosec extends Fish {
-
-    String name;
-
-    Mechenosec(String name) {
-        super(name);
-        this.name = name;
-    }
-
-    public void swim() {
-        System.out.println("Mechenosec krasivaya riba, kotoraya bistro plavaet!");
-    }
-
-    public void eat() {
-        System.out.println("Mechenosec ne xishnaya riba, ona est obichniy ribiy korm!");
-    }
-
-}
-
-class Pingvin extends Bird {
-
-    String name;
-
-    Pingvin(String name) {
-        super(name);
-        this.name = name;
-    }
-
-    public void eat() {
-        System.out.println("Pingvin lyubit est ribu!");
-    }
-
-    public void sleep() {
-        System.out.println("Pingvini spyat prijavshis drug k drugu!");
-    }
-
-    public void fly() {
-        System.out.println("Pingvini ne umeyut letat!");
-    }
-
-    public void speak() {
-        System.out.println("Pingvini ne umeyut pet kak solovyi");
-    }
-
-}
-
-class Lev extends Mammal {
-
-    String name;
-
-    Lev(String name) {
-        super(name);
-        this.name = name;
-    }
-
-    public void eat() {
-        System.out.println("Lev, kak lyuboy sishnik, lyubit myaso!");
-    }
-
-    public void sleep() {
-        System.out.println("Bolshuyu chast dnya lev spit!");
-    }
-
-    public void run() {
-        System.out.println("Lev - eto ne samaya bistraya koshka!");
-    }
-
-}
-
-// Result:
